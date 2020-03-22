@@ -46,7 +46,7 @@ const Login = (props) => {
 
     return (
         <div className='wrap'>
-            <div className="card card-body text-white bg-primary mx-auto" style={{ maxWidth: '30rem' }}>
+            <div className="card card-body text-white bg-primary mx-auto card-width">
                 <h1 className="text-center">Account Login</h1>
                 <form onSubmit={onSubmit}>
                     <div className="form-group">
