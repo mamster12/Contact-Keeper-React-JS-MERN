@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import AuthContext from '../../context/auth/authContext';
 import ContactContext from '../../context/contact/contactContext';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { faAddressBook } from '@fortawesome/free-solid-svg-icons';
 
 
 const Navbar = ({ title, icon }) => {
@@ -31,7 +34,7 @@ const Navbar = ({ title, icon }) => {
             </li>
             <li className="nav-item">
                 <a onClick={onLogout} href="/login" className="nav-link active" data-confirm="Are you sure you want to logout?">
-                    <i className="fas fa-sign-out-alt"></i><span> Logout</span>
+                    <FontAwesomeIcon icon={faSignOutAlt} /><span> Logout</span>
                 </a>
             </li>
         </Fragment>
@@ -54,7 +57,7 @@ const Navbar = ({ title, icon }) => {
     return (
         <div className="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
             <div className="container">
-                <a className="navbar-brand" href="/"><i className={icon} /> {title}</a>
+                <a className="navbar-brand" href="/"><FontAwesomeIcon icon={faAddressBook} /> {title}</a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
